@@ -23,7 +23,7 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/'||'https://zaya-app.herokuapp.com/users/')
+    axios.get('https://zaya-app.herokuapp.com/users/')    //'http://localhost:5000/users/'
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -74,7 +74,7 @@ export default class CreateExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('http://localhost:5000/exercises/add'||'https://zaya-app.herokuapp.com/exercises/add', exercise)
+    axios.post('https://zaya-app.herokuapp.com/exercises/add', exercise)     //'http://localhost:5000/exercises/add'
       .then(res => console.log(res.data));
 
     window.location = '/';

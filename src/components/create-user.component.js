@@ -28,7 +28,7 @@ export default class CreateUser extends Component {
 
     console.log(user);
 
-    axios.post('http://localhost:5000/users/add'||'https://zaya-app.herokuapp.com/users/add', user)
+    axios.post('https://zaya-app.herokuapp.com/users/add', user)    //'http://localhost:5000/users/add'
       .then(res => console.log(res.data));
 
     this.setState({
